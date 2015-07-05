@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<title> Hello</title>
+	</head>
+	<body>
+		<h1>Hello from Rails!</h1>
+		<p>
+			It is now <%= @time %>
+		</p>
+		<p>
+			<!--<Say <a href="/say/goodbye">Goodbye </a>-->
+			Time to say <%= link_to "Goodbye!",say_goodbye_path %>
+		</p>
+		<h2>Tests!</h2>
+		<p>
+			Additions:
+			<%= 1+2+3 %>
+		</p>
+		<p>
+			Concatenation:
+			<%= "Andres"+" Camilo "+"Jimenez\n" %>
+		</p>
+		<p>
+			Time in one hour:
+			<%= 1.hour.from_now %>
+			Time in two hour:
+			<%= 2.hour.from_now %>
+			Time in three hour:
+			<%= 3.hour.from_now %>
+			Time in four hour:
+			<%= 4.hour.from_now %>
+		</p>
+		<table align='center'>
+			<th> File name </th>
+			<% for file in @files %>
+			<tr><td><%= file %><td></tr>
+			<% end %>
+		</table>
+
+	</body>
+</html>
